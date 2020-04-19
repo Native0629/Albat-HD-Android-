@@ -1,6 +1,8 @@
 # Albat-HD
 Android App, CodeIgnitor Backend
 
+![app_logo](https://user-images.githubusercontent.com/46530278/79677143-9646ad00-8220-11ea-950a-ad49b8765ffa.png)
+
 FaceBook, google,  twitter, email login functions.
 
 Have backend source code.
