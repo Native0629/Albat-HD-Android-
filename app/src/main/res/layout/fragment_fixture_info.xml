@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:id="@+id/signinLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                app:shape_roundRect_borderColor="@color/black"
+                app:shape_roundRect_borderWidth="0.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EDEDED"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="المرجو تسجيل الدخول حتي تتمكن من وضع توقعك !"
+                        android:textColor="#787676"
+                        android:textSize="13sp" />
+
+                    <com.github.florent37.shapeofview.shapes.RoundRectView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:shape_roundRect_borderColor="@color/myPrimaryColor"
+                        app:shape_roundRect_borderWidth=".5dp"
+                        app:shape_roundRect_bottomLeftRadius="5dp"
+                        app:shape_roundRect_bottomRightRadius="5dp"
+                        app:shape_roundRect_topLeftRadius="5dp"
+                        app:shape_roundRect_topRightRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/signinButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/myPrimaryColor"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="تسجيل الدخول"
+                            android:textColor="@color/white" />
+                    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+                </LinearLayout>
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:id="@+id/guessLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:shape_roundRect_borderColor="@color/black"
+                app:shape_roundRect_borderWidth="0.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EDEDED"
+                    android:layoutDirection="ltr"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="توقع و اربح !"
+                        android:textColor="#787676"
+                        android:textSize="19sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.github.florent37.shapeofview.shapes.RoundRectView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:shape_roundRect_borderColor="#BAB8B8"
+                                app:shape_roundRect_borderWidth=".5dp"
+                                app:shape_roundRect_bottomLeftRadius="5dp"
+                                app:shape_roundRect_bottomRightRadius="5dp"
+                                app:shape_roundRect_topLeftRadius="5dp"
+                                app:shape_roundRect_topRightRadius="5dp">
+
+                                <LinearLayout
+                                    android:id="@+id/guessResult"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#7D1A45"
+                                    android:gravity="center"
+                                    android:minHeight="40dp"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="2dp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/guessResultMinCoins"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="5dp"
+                                            android:text="10"
+                                            android:textColor="#E7D10B" />
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:src="@drawable/ic_gold" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="توقع النتيجة"
+                                        android:textColor="@color/white" />
+
+                                </LinearLayout>
+                            </com.github.florent37.shapeofview.shapes.RoundRectView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.github.florent37.shapeofview.shapes.RoundRectView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:shape_roundRect_borderColor="#BAB8B8"
+                                app:shape_roundRect_borderWidth=".5dp"
+                                app:shape_roundRect_bottomLeftRadius="5dp"
+                                app:shape_roundRect_bottomRightRadius="5dp"
+                                app:shape_roundRect_topLeftRadius="5dp"
+                                app:shape_roundRect_topRightRadius="5dp">
+
+                                <LinearLayout
+                                    android:id="@+id/guessWinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#1A6F7C"
+                                    android:gravity="center"
+                                    android:minHeight="40dp"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="2dp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/guessWinnerMinCoins"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="5dp"
+                                            android:text="5"
+                                            android:textColor="#E7D10B" />
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:src="@drawable/ic_gold" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="توقع الفائز"
+                                        android:textColor="@color/white" />
+
+                                </LinearLayout>
+                            </com.github.florent37.shapeofview.shapes.RoundRectView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_roundRect_borderColor="@color/black"
+                app:shape_roundRect_borderWidth="0.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EDEDED"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="معلومات إضافية"
+                        android:textColor="#787676"
+                        android:textSize="19sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_league_title"
+                            android:tint="#4B4949" />
+
+                        <TextView
+                            android:id="@+id/league"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:text="اسم البطولة"
+                            android:textColor="#4B4949"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_stadium"
+                            android:tint="#4B4949" />
+
+                        <TextView
+                            android:id="@+id/stadium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:text="اسم الملعب"
+                            android:textColor="#4B4949"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_commentator"
+                            android:tint="#4B4949" />
+
+                        <TextView
+                            android:id="@+id/commentator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:text="اسم المعلق"
+                            android:textColor="#4B4949"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:shape_roundRect_borderColor="@color/black"
+                app:shape_roundRect_borderWidth="0.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EDEDED"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="القنوات الناقلة"
+                        android:textColor="#787676"
+                        android:textSize="19sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/channel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="القنوات الناقلة"
+                            android:textColor="#4B4949"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

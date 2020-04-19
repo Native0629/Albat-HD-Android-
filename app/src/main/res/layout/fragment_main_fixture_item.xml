@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal">
+
+    <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/infoLayout"
+        app:shape_roundRect_borderColor="@color/black"
+        app:shape_roundRect_borderWidth="0.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E8E8E8"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/team2Picture"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:src="@drawable/no_image"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1dp" />
+
+                <TextView
+                    android:id="@+id/team2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/team2Picture"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingRight="2dp"
+                    android:singleLine="true"
+                    android:text="اسم الفريق"
+                    android:textColor="#727272"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/team2Result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="#767676"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Vs"
+                    android:textColor="#767676"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/team1Result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="#767676"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/team1Picture"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:src="@drawable/no_image"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1dp" />
+
+                <TextView
+                    android:id="@+id/team1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/team1Picture"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingRight="2dp"
+                    android:singleLine="true"
+                    android:text="اسم الفريق"
+                    android:textColor="#727272"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+    <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:id="@+id/infoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/content"
+        android:layout_marginRight="-1dp"
+        app:shape_roundRect_borderColor="@color/black"
+        app:shape_roundRect_borderWidth="0.5dp">
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#EBEAE9"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingRight="2dp"
+                android:text="لم تبدأ"
+                android:textColor="#727272"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+</RelativeLayout>

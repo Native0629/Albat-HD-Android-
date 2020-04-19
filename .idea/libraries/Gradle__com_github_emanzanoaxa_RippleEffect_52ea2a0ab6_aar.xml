@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.emanzanoaxa:RippleEffect:52ea2a0ab6@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/abdef0bd7a8cd6b0f4be9765d3d780c0/jetified-RippleEffect-52ea2a0ab6/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/abdef0bd7a8cd6b0f4be9765d3d780c0/jetified-RippleEffect-52ea2a0ab6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/abdef0bd7a8cd6b0f4be9765d3d780c0/jetified-RippleEffect-52ea2a0ab6/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

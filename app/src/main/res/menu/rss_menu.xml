@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:universal="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_item_share"
+        android:icon="@drawable/ic_action_share"
+        android:title="@string/share"
+        universal:showAsAction="never" />
+
+    <item
+        android:id="@+id/refresh_rss"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/refresh"
+        universal:showAsAction="never" />
+
+</menu>
+

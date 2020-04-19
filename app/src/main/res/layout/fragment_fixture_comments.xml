@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            style="@style/listStyleNoPadding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer"
+            android:layout_alignParentRight="true"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:focusable="false"
+            android:paddingBottom="50dp" />
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/light_gray"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/addComment"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:rotation="180"
+                    android:src="@drawable/send_button"
+                    android:tint="@color/dark_gray" />
+
+                <TextView
+                    android:id="@+id/charCount"
+                    style="@style/listTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/addComment"
+                    android:gravity="center"
+                    android:text="180"
+                    android:textColor="@color/red_A700" />
+
+                <com.github.florent37.shapeofview.shapes.RoundRectView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/charCount"
+                    app:shape_roundRect_borderColor="@color/black"
+                    app:shape_roundRect_borderWidth="0.5dp"
+                    app:shape_roundRect_bottomLeftRadius="15dp"
+                    app:shape_roundRect_bottomRightRadius="15dp"
+                    app:shape_roundRect_topLeftRadius="15dp"
+                    app:shape_roundRect_topRightRadius="15dp">
+
+                    <EditText
+                        android:id="@+id/commentText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:hint="اضــف تعلــيــق"
+                        android:inputType="textMultiLine"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/black" />
+                </com.github.florent37.shapeofview.shapes.RoundRectView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noComments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="لا توجد تعليقات"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

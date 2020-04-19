@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "737620722705",
+    "firebase_url": "https://testcc-e6499.firebaseio.com",
+    "project_id": "testcc-e6499",
+    "storage_bucket": "testcc-e6499.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737620722705:android:dfec84285f694b24",
+        "android_client_info": {
+          "package_name": "com.albat.mobachir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737620722705-25sft5n8fqqdm2h8td0i9qf2qrq0gvj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1K1ai_X0BgqWQNgM2UHV7g3Rkrdm3678"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737620722705:android:1604f3a8cb4bb55e",
+        "android_client_info": {
+          "package_name": "com.worldcup.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737620722705-25sft5n8fqqdm2h8td0i9qf2qrq0gvj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1K1ai_X0BgqWQNgM2UHV7g3Rkrdm3678"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp">
+
+    <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shape_roundRect_borderColor="#BAB8B8"
+        app:shape_roundRect_borderWidth="1dp"
+        app:shape_roundRect_bottomLeftRadius="5dp"
+        app:shape_roundRect_bottomRightRadius="5dp"
+        app:shape_roundRect_topLeftRadius="5dp"
+        app:shape_roundRect_topRightRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="#2A7B1A" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/team2Picture"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="3dp"
+                            android:gravity="center"
+                            android:src="@drawable/no_image" />
+
+                        <TextView
+                            android:id="@+id/team2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/team2Picture"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingRight="2dp"
+                            android:singleLine="true"
+                            android:text="اسم الفريق"
+                            android:textColor="#727272"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <com.github.florent37.shapeofview.shapes.RoundRectView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:shape_roundRect_borderColor="#BAB8B8"
+                        app:shape_roundRect_borderWidth="1dp"
+                        app:shape_roundRect_bottomLeftRadius="5dp"
+                        app:shape_roundRect_bottomRightRadius="5dp"
+                        app:shape_roundRect_topLeftRadius="5dp"
+                        app:shape_roundRect_topRightRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#EBEAE9"
+                            android:gravity="center"
+                            android:minWidth="70dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:paddingRight="2dp"
+                                android:singleLine="true"
+                                android:text="10/9"
+                                android:textColor="#727272"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:paddingRight="2dp"
+                                android:singleLine="true"
+                                android:text="10 ص"
+                                android:textColor="#727272"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center">
+
+                        <TextView
+                            android:id="@+id/team1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/team1Picture"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingRight="2dp"
+                            android:singleLine="true"
+                            android:text="اسم الفريق"
+                            android:textColor="#727272"
+                            android:textSize="12sp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/team1Picture"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="3dp"
+                            android:gravity="center"
+                            android:src="@drawable/no_image" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <com.github.florent37.shapeofview.shapes.RoundRectView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:shape_roundRect_borderColor="#BAB8B8"
+                            app:shape_roundRect_borderWidth=".5dp"
+                            app:shape_roundRect_bottomLeftRadius="5dp"
+                            app:shape_roundRect_bottomRightRadius="5dp"
+                            app:shape_roundRect_topLeftRadius="5dp"
+                            app:shape_roundRect_topRightRadius="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/guessResult"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#7D1A45"
+                                android:gravity="center"
+                                android:minHeight="40dp"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="2dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/guessResultMinCoins"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:text="10"
+                                        android:textColor="#E7D10B" />
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/ic_gold" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="توقع النتيجة"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </com.github.florent37.shapeofview.shapes.RoundRectView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <com.github.florent37.shapeofview.shapes.RoundRectView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:shape_roundRect_borderColor="#BAB8B8"
+                            app:shape_roundRect_borderWidth=".5dp"
+                            app:shape_roundRect_bottomLeftRadius="5dp"
+                            app:shape_roundRect_bottomRightRadius="5dp"
+                            app:shape_roundRect_topLeftRadius="5dp"
+                            app:shape_roundRect_topRightRadius="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/guessWinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#1A6F7C"
+                                android:gravity="center"
+                                android:minHeight="40dp"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="2dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/guessWinnerMinCoins"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:text="5"
+                                        android:textColor="#E7D10B" />
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/ic_gold" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="توقع الفائز"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </com.github.florent37.shapeofview.shapes.RoundRectView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+</LinearLayout>

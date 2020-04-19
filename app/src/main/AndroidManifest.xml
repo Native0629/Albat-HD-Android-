@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.albat.mobachir"
+    android:versionCode="20"
+    android:versionName="4.0">
+
+    <!-- Always Required to get content and check if internet is available -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.albat.mobachir.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:largeHeap="true"
+        tools:node="replace"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:name,android:theme">
+
+        <!-- Activities -->
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".NewUpdateActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/splash" />
+
+        <activity
+            android:name="com.albat.mobachir.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppThemeBar">
+
+        </activity>
+        <activity android:name=".providers.rss.ui.RssDetailActivity" />
+        <activity android:name=".providers.youtube.ui.YoutubeDetailActivity" />
+        <activity android:name=".providers.wordpress.ui.WordpressDetailActivity" />
+        <activity android:name=".providers.woocommerce.ui.ProductActivity" />
+        <activity android:name="com.albat.mobachir.FullScreenActivity" />
+        <activity android:name="com.albat.mobachir.VideoPlayerActivity" />
+        <activity
+            android:name=".comments.CommentsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".HolderActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".attachmentviewer.ui.AttachmentActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".attachmentviewer.ui.AudioPlayerActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".attachmentviewer.ui.VideoPlayerActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".providers.woocommerce.ui.CheckoutActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".providers.tumblr.ui.TumblrPagerActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+        <activity
+            android:name=".providers.youtube.player.YouTubePlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".RegisterActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <!-- Services -->
+        <service
+            android:name=".providers.soundcloud.player.player.PlaybackService"
+            android:exported="false" />
+        <service android:name=".providers.radio.player.RadioService" />
+        <service android:name=".attachmentviewer.MusicService" />
+
+        <service android:name="com.onesignal.SyncJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+
+        <!-- A receiver that will receive media buttons and send as
+        intents to your MediaBrowserServiceCompat implementation.
+        Required on pre-Lollipop. More information at
+        http://developer.android.com/reference/android/support/v4/media/session/MediaButtonReceiver.html -->
+        <receiver android:name="androidx.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".providers.soundcloud.player.player.PlayerReceiver">
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".providers.soundcloud.player.media.MediaSessionReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Meta Data -->
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_android_key" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <provider
+            android:name="net.grandcentrix.tray.provider.TrayContentProvider"
+            android:authorities="${applicationId}.tray"
+            android:exported="false"
+            tools:replace="android:authorities" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="6093ee8b88ee88da0d33918ec42d3e3773d91b56" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges= "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+
+        <!--        <activity-->
+        <!--            android:name="com.facebook.FacebookActivity"-->
+        <!--            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+        <!--            android:label="@string/app_name" />-->
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme"
+                    tools:ignore="ManifestResource" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.twitter.sdk.android.core.identity.OAuthActivity" />
+
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+<!--    google login result is developer error in android-->
+</manifest>

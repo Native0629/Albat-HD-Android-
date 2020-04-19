@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kaushikthedeveloper.squarelayout.SquareLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="League Name"
+        android:textColor="#605E5E"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_league" />
+
+</com.kaushikthedeveloper.squarelayout.SquareLinearLayout>

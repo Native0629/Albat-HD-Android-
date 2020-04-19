@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:id="@+id/statsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_roundRect_borderColor="@color/black"
+                app:shape_roundRect_borderWidth="0.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EDEDED"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="إحصائيات المبارة"
+                        android:textColor="#787676"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="الإستحواذ"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t1Possession"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#3EA002"
+                                android:textSize="13sp"
+                                android:visibility="visible" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t1PossessionBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/t1Possession"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="50"
+                                app:rcProgressColor="#3EA002"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="ltr"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t2Possession"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#E04703"
+                                android:textSize="13sp"
+                                android:visibility="visible" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t2PossessionBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/t2Possession"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="0"
+                                app:rcProgressColor="#E04703"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="تسديدات علي المرمي"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t1OnGoalShots"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#3EA002"
+                                android:textSize="13sp"
+                                android:visibility="visible" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t1OnGoalShotsBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/t1OnGoalShots"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="50"
+                                app:rcProgressColor="#3EA002"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="ltr"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t2OnGoalShots"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:text="0%"
+                                android:textColor="#E04703"
+                                android:textSize="13sp"
+                                android:visibility="visible" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t2OnGoalShotsBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/t2OnGoalShots"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="0"
+                                app:rcProgressColor="#E04703"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="عدد التسللات"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t1Offsides"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#3EA002"
+                                android:textSize="13sp"
+                                android:visibility="visible" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t1OffsidesBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/t1Offsides"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="50"
+                                app:rcProgressColor="#3EA002"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="ltr"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t2Offsides"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#E04703"
+                                android:textSize="13sp"
+                                android:visibility="visible" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t2OffsidesBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/t2Offsides"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="0"
+                                app:rcProgressColor="#E04703"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="عدد الأخطاء"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t1Fouls"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#3EA002"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t1FoulsBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/t1Fouls"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="50"
+                                app:rcProgressColor="#3EA002"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="ltr"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t2Fouls"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#E04703"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t2FoulsBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/t2Fouls"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="0"
+                                app:rcProgressColor="#E04703"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="عدد الركنيات"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t1Corners"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#3EA002"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t1CornersBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/t1Corners"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="50"
+                                app:rcProgressColor="#3EA002"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="ltr"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t2Corners"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#E04703"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t2CornersBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/t2Corners"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="0"
+                                app:rcProgressColor="#E04703"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="عدد الضربات الحرة"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t1freeKicks"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#3EA002"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t1freeKicksBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/t1freeKicks"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="50"
+                                app:rcProgressColor="#3EA002"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="ltr"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t2freeKicks"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#E04703"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t2freeKicksBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/t2freeKicks"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="0"
+                                app:rcProgressColor="#E04703"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="عدد الكروت الصفراء"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t1YellowCards"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#3EA002"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t1YellowCardsBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/t1YellowCards"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="50"
+                                app:rcProgressColor="#3EA002"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="ltr"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t2YellowCards"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#E04703"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t2YellowCardsBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/t2YellowCards"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="0"
+                                app:rcProgressColor="#E04703"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="عدد الكروت الحمراء"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t1RedCards"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#3EA002"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t1RedCardsBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/t1RedCards"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="50"
+                                app:rcProgressColor="#3EA002"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="ltr"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t2RedCards"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#E04703"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t2RedCardsBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/t2RedCards"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="0"
+                                app:rcProgressColor="#E04703"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="عدد التبديلات"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t1Substitutions"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#3EA002"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t1SubstitutionsBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/t1Substitutions"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="50"
+                                app:rcProgressColor="#3EA002"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:layoutDirection="ltr"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t2Substitutions"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:text="10%"
+                                android:textColor="#E04703"
+                                android:textSize="13sp" />
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/t2SubstitutionsBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/t2Substitutions"
+                                app:rcBackgroundColor="@color/white"
+                                app:rcMax="100"
+                                app:rcProgress="0"
+                                app:rcProgressColor="#E04703"
+                                app:rcRadius="10dp"
+                                app:rcReverse="true" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/noComments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="لا توجد إحصائيات متوفرة"
+        android:visibility="gone" />
+</RelativeLayout>

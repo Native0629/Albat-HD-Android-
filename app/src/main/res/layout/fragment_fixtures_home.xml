@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <com.github.florent37.shapeofview.shapes.RoundRectView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        app:shape_roundRect_borderColor="#BAB8B8"
+                        app:shape_roundRect_borderWidth="1dp"
+                        app:shape_roundRect_bottomLeftRadius="5dp"
+                        app:shape_roundRect_bottomRightRadius="5dp"
+                        app:shape_roundRect_topLeftRadius="5dp"
+                        app:shape_roundRect_topRightRadius="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/prevDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="#2C8A18"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:rotation="180"
+                                android:src="@drawable/ic_double_arrow"
+                                android:tint="@color/white" />
+
+                        </LinearLayout>
+                    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+                    <com.github.florent37.shapeofview.shapes.RoundRectView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:shape_roundRect_borderColor="#BAB8B8"
+                        app:shape_roundRect_borderWidth="1dp"
+                        app:shape_roundRect_bottomLeftRadius="5dp"
+                        app:shape_roundRect_bottomRightRadius="5dp"
+                        app:shape_roundRect_topLeftRadius="5dp"
+                        app:shape_roundRect_topRightRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="#2C8A18"
+                            android:gravity="center"
+                            android:minWidth="70dp"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+
+                            <TextView
+                                android:id="@+id/dayLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:paddingRight="2dp"
+                                android:singleLine="true"
+                                android:text="اليوم"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:paddingRight="2dp"
+                                android:singleLine="true"
+                                android:text="08/08/2018"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+                    <com.github.florent37.shapeofview.shapes.RoundRectView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        app:shape_roundRect_borderColor="#BAB8B8"
+                        app:shape_roundRect_borderWidth="1dp"
+                        app:shape_roundRect_bottomLeftRadius="5dp"
+                        app:shape_roundRect_bottomRightRadius="5dp"
+                        app:shape_roundRect_topLeftRadius="5dp"
+                        app:shape_roundRect_topRightRadius="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/nextDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="#2C8A18"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:src="@drawable/ic_double_arrow"
+                                android:tint="@color/white" />
+
+                        </LinearLayout>
+                    </com.github.florent37.shapeofview.shapes.RoundRectView>
+                </LinearLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/tabLayout"
+                    android:layout_below="@+id/header" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#309A19"
+                    android:elevation="3dp"
+                    android:layoutDirection="rtl"
+                    android:theme="@style/TabLayoutTheme"
+                    app:tabBackground="@drawable/tab1_color_selector"
+                    app:tabIndicatorColor="@color/transparent"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextAppearance="@style/BottomTabTextSmall"
+                    app:tabTextColor="@color/white" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signinLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="يجب عليك تسجيل الدخول لمشاهدة توقعاتك"
+                android:textColor="@color/myPrimaryColor"
+                android:textSize="15sp" />
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:shape_roundRect_borderColor="@color/myPrimaryColor"
+                app:shape_roundRect_borderWidth=".5dp"
+                app:shape_roundRect_bottomLeftRadius="5dp"
+                app:shape_roundRect_bottomRightRadius="5dp"
+                app:shape_roundRect_topLeftRadius="5dp"
+                app:shape_roundRect_topRightRadius="5dp">
+
+                <TextView
+                    android:id="@+id/signinButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="تسجيل الدخول"
+                    android:textColor="@color/white" />
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

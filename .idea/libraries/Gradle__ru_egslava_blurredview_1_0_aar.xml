@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: ru.egslava:blurredview:1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ac8296e82ce71120e00416fee2c138b/blurredview-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ac8296e82ce71120e00416fee2c138b/blurredview-1.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ru.egslava/blurredview/1.0/57543af8b1123f8787f6f539ea668a6b8582cd8f/blurredview-1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ru.egslava/blurredview/1.0/bd8315c0cf5e072e85549ac1fc03800825b3349f/blurredview-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

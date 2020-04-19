@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.florent37.shapeofview.shapes.RoundRectView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            app:shape_roundRect_borderColor="@color/black"
+            app:shape_roundRect_borderWidth="0.5dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                style="@style/listStyleNoPadding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/footer"
+                android:layout_alignParentRight="true"
+                android:background="#EDEDED"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:focusable="false"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp" />
+        </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+        <TextView
+            android:id="@+id/noComments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="معلومات التشكيلة غير متاحة الآن"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/backBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_six"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/arrow_left"
+                    android:tint="@color/white" />
+
+                <TextView
+                    style="@style/listTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="العوده"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_m"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_light_gray"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/team2Flag"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/flag_unknown" />
+
+                    <TextView
+                        android:id="@+id/team2Name"
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="Team 2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gradient_six"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Vs"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/team1Flag"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/flag_unknown" />
+
+                    <TextView
+                        android:id="@+id/team1Name"
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="Team 1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/notes"
+                style="@style/listTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="ملاحظات"
+                android:textColor="#FF0000"
+                android:textSize="@dimen/textsize_l"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/listTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="تفاصيل المباراة"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_xl"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_six"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/timeHeader"
+                    android:gravity="right"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_m"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/timeHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="موعد المباراة"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_six"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/titleHeader"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_m"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/titleHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="البطولة"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_six"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/stadium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/stadiumHeader"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_m"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/stadiumHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="ملعب المبارة"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_six"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/channel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/channelHeader"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_m"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/channelHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="القنوات الناقلة"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_six"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/commentator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/commentatorHeader"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_m"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/commentatorHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/listTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="معلق المباراة"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_m"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

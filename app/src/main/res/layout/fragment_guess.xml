@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/tabLayout" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#309A19"
+                    android:elevation="3dp"
+                    android:layoutDirection="rtl"
+                    android:theme="@style/TabLayoutTheme"
+                    app:tabBackground="@drawable/tab1_color_selector"
+                    app:tabIndicatorColor="@color/transparent"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextAppearance="@style/BottomTabTextSmall"
+                    app:tabTextColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/watchAdd"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_above="@+id/tabLayout"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_add_golden_points" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signinLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#00000000"
+                android:orientation="vertical">
+
+
+                <com.github.florent37.shapeofview.shapes.RoundRectView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:shape_roundRect_borderColor="#BAB8B8"
+                    app:shape_roundRect_borderWidth="1dp"
+                    app:shape_roundRect_bottomLeftRadius="5dp"
+                    app:shape_roundRect_bottomRightRadius="5dp"
+                    app:shape_roundRect_topLeftRadius="5dp"
+                    app:shape_roundRect_topRightRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_user" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_marginTop="20dp"
+                                android:text="المرجو تسجيل الدخول حتي تتمكن من وضع توقعك !"
+                                android:textColor="#727272" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.github.florent37.shapeofview.shapes.RoundRectView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:shape_roundRect_borderColor="@color/myPrimaryColor"
+                                    app:shape_roundRect_borderWidth=".5dp"
+                                    app:shape_roundRect_bottomLeftRadius="5dp"
+                                    app:shape_roundRect_bottomRightRadius="5dp"
+                                    app:shape_roundRect_topLeftRadius="5dp"
+                                    app:shape_roundRect_topRightRadius="5dp">
+
+                                    <TextView
+                                        android:id="@+id/signinButton"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@color/myPrimaryColor"
+                                        android:gravity="center"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text="تسجيل الدخول"
+                                        android:textColor="@color/white" />
+                                </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/ic_gold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:text="50 مكافأة"
+                                        android:textColor="#727272"
+                                        android:textSize="16sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </com.github.florent37.shapeofview.shapes.RoundRectView>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

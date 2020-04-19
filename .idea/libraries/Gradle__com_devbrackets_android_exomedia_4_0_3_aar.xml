@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.devbrackets.android:exomedia:4.0.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51aa807461117389778515b7142c987d/jetified-exomedia-4.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51aa807461117389778515b7142c987d/jetified-exomedia-4.0.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.devbrackets.android/exomedia/4.0.3/7fdb2a8418bee8edb4650749342047793b57da0a/exomedia-4.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.devbrackets.android/exomedia/4.0.3/6cc8be83aa813a4a82e145d194cbbb5fec3461dd/exomedia-4.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
